@@ -1,0 +1,140 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.logo {
+  float: left;
+  font-size: 1.5rem;
+}
+
+nav {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Clearfix */
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.section:nth-child(even) {
+  background: #eaeaea;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.project-card {
+  flex: 1 1 calc(50% - 1.5rem);
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #444;
+  }
+
+  .nav-links li {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .nav-links a {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .projects {
+    flex-direction: column;
+  }
+
+  .project-card {
+    flex: 1 1 100%;
+  }
+}
